@@ -19,8 +19,40 @@ def menu():
         pass
     elif (opcion == 2):
         pass
-    elif (opcion == 3): 
+    elif (opcion == 3):
         pass
+    elif (opcion == 4): 
+        pass
+    elif (opcion == 5): 
+        pass
+    elif (opcion == 6): 
+        pass
+    elif (opcion == 7): 
+        pass
+    elif (opcion == 8): 
+        pass
+    elif (opcion == 9): 
+        pass
+    elif (opcion == 10): 
+        print(""); insertar=insert(data); print(insertar)
+    elif (opcion == 11): 
+        pass
+
+
+def insert(data): #Funcion de Jaider
+    print("Bienvenido a la inserción de datos, primero se te pedirá un dato para añadir a la lista (data)")
+    print("Luego se te pedirá la posición (indexación) en donde se ubicará el dato a la lista, por ejemplo: 0"); print("")
+    print("1. Dato Textual"); print("2. Dato Numerico")
+    tipo=int(input("Que tipo de dato añadirás a la lista?: "))
+    if tipo == 1:
+        datos=input("Escriba el dato textual que desea ingresar: ")
+        posicion=int(input("Escriba la posición del nuevo dato: "))
+    elif tipo == 2:
+        datos=float(input("Escriba el dato numerico que desea ingresar: "))
+        posicion=int(input("Escriba la posición del nuevo dato: "))
+    data.insert(posicion,datos)
+    return data
+
 
 #Resto de funciones
 
