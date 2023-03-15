@@ -1,4 +1,5 @@
-data = ["Jaider","Ronald","Andres","Didier"]
+from os import system; system("cls")
+data = ["Jaider","Ronald","Andres","Cristian","Didier"]
 
 def menu():
     print("APRENDIENDO LOS METODOS DE LISTAS")
@@ -30,7 +31,7 @@ def menu():
     elif (opcion == 7): 
         pass
     elif (opcion == 8): 
-        pass
+        fun_pop(data)
     elif (opcion == 9): 
         compu()
     elif (opcion == 10): 
@@ -39,6 +40,11 @@ def menu():
         print("la funcion del metodo reverse es mostrar a lista en orden contrario")
         datos=reversa(data); print(datos)
 
+def fun_pop(data): #Función pop de Cristian Barrera
+    print(data)
+    x=(int(input("ingrese el elemento que desea el dato a borrar: ")))
+    v=data.pop(x)
+    print("nueva lista", data)
 def compu(): #Función Sort de Andres Barragán
     data.sort()
     print("La lista se organizará automaticamente")
@@ -47,7 +53,7 @@ def compu(): #Función Sort de Andres Barragán
     print("-----------------------")
     print("listo")
     print("you did it")
-def insert(data): #Funcion Insert de Jaider
+def insert(data): #Función Insert de Jaider
     print("Bienvenido a la inserción de datos, primero se te pedirá un dato para añadir a la lista (data)")
     print("Luego se te pedirá la posición (indexación) en donde se ubicará el dato a la lista, por ejemplo: 0"); print("")
     print("1. Dato Textual"); print("2. Dato Numerico")
@@ -60,7 +66,7 @@ def insert(data): #Funcion Insert de Jaider
         posicion=int(input("Escriba la posición del nuevo dato: "))
     data.insert(posicion,datos)
     return data
-def reversa(a): #Funcion Reverse de Ronald
+def reversa(a): #Función Reverse de Ronald
     l = list(a)
     l.reverse()
     return l
