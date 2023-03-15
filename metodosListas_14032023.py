@@ -1,4 +1,4 @@
-data = ["Jaider","Ronald","Didier"]
+data = ["Jaider","Ronald","Andres","Didier"]
 
 def menu():
     print("APRENDIENDO LOS METODOS DE LISTAS")
@@ -32,14 +32,21 @@ def menu():
     elif (opcion == 8): 
         pass
     elif (opcion == 9): 
-        pass
+        compu()
     elif (opcion == 10): 
         print(""); insertar=insert(data); print(insertar)
     elif (opcion == 11): 
         print("la funcion del metodo reverse es mostrar a lista en orden contrario")
         datos=reversa(data); print(datos)
 
-
+def compu(): #Función Sort de Andres Barragán
+    data.sort()
+    print("La lista se organizará automaticamente")
+    print("-----------------------")
+    print(data)
+    print("-----------------------")
+    print("listo")
+    print("you did it")
 def insert(data): #Funcion Insert de Jaider
     print("Bienvenido a la inserción de datos, primero se te pedirá un dato para añadir a la lista (data)")
     print("Luego se te pedirá la posición (indexación) en donde se ubicará el dato a la lista, por ejemplo: 0"); print("")
