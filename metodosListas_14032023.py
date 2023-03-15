@@ -1,4 +1,4 @@
-data = ["Jaider", "Didier"]
+data = ["Jaider","Ronald","Didier"]
 
 def menu():
     print("APRENDIENDO LOS METODOS DE LISTAS")
@@ -53,7 +53,7 @@ def insert(data): #Funcion Insert de Jaider
         posicion=int(input("Escriba la posición del nuevo dato: "))
     data.insert(posicion,datos)
     return data
-def reversa(a): #Funcion Reverse
+def reversa(a): #Funcion Reverse de Ronald
     l = list(a)
     l.reverse()
     return l
