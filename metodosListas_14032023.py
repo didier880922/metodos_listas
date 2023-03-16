@@ -5,12 +5,12 @@ data2 = [1,2,3,4,5,6,7]
 def menu():
     print("APRENDIENDO LOS METODOS DE LISTAS")
     print("1. Metodo Append") #✓
-    print("2. Metodo Index")
+    print("2. Metodo Index") #Alverio no hizo nada
     print("3. Metodo Count") #✓
-    print("4. Metodo Clear")
+    print("4. Metodo Clear") #No hizo nada
     print("5. Metodo Extend") #✓
     print("6. Metodo Remove") #✓
-    print("7. Metodo Len")
+    print("7. Metodo Len") #Didier lo hizo
     print("8. Metodo Pop") #✓
     print("9. Metodo Sort") #✓
     print("10. Metodo Insert") #✓
