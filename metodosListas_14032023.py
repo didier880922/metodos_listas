@@ -1,5 +1,6 @@
 from os import system; system("cls")
 data = ["Jaider","Ronald","Andres","Cristian","Didier"]
+data2 = [1,2,3,4,5]
 
 def menu():
     print("APRENDIENDO LOS METODOS DE LISTAS")
@@ -7,13 +8,13 @@ def menu():
     print("2. Metodo Index")
     print("3. Metodo Count")
     print("4. Metodo Clear")
-    print("5. Metodo Extend")
+    print("5. Metodo Extend") #✓
     print("6. Metodo Remove")
     print("7. Metodo Len")
-    print("8. Metodo Pop")
-    print("9. Metodo Sort")
-    print("10. Metodo Insert")
-    print("11. Metodo Reverse")
+    print("8. Metodo Pop") #✓
+    print("9. Metodo Sort") #✓
+    print("10. Metodo Insert") #✓
+    print("11. Metodo Reverse") #✓
     opcion = int(input("Digita una opción: "))
 
     if (opcion == 1):
@@ -25,7 +26,7 @@ def menu():
     elif (opcion == 4): 
         pass
     elif (opcion == 5): 
-        pass
+        motodo_extend(data,data2)
     elif (opcion == 6): 
         pass
     elif (opcion == 7): 
@@ -40,7 +41,20 @@ def menu():
         print("la funcion del metodo reverse es mostrar a lista en orden contrario")
         datos=reversa(data); print(datos)
 
-def fun_pop(data): #Función pop de Cristian Barrera
+#Funciones
+
+def motodo_extend(data,data2): #Función Extend de Manuel Montes Barrios
+    dato=input("Quiere agregar un dato a la lista? si/no: ")
+    if dato == "si":
+        x=input("ingrese un dato: ")
+        data2.append(x)
+        data.extend(data2)
+        print(data)
+    elif dato=="no":
+        data.extend(data2)
+        print(data)
+
+def fun_pop(data): #Función Pop de Cristian Barrera
     print(data)
     x=(int(input("ingrese el elemento que desea el dato a borrar: ")))
     v=data.pop(x)
@@ -70,10 +84,6 @@ def reversa(a): #Función Reverse de Ronald
     l = list(a)
     l.reverse()
     return l
-
-
-#Resto de funciones
-
 
 #Codigo principal
 if __name__ == "__main__":
