@@ -1,5 +1,5 @@
 from os import system; system("cls")
-data = ["Jaider","Ronald","Andres","Cristian","Manuel","Hector","Didier"]
+data = ["Jaider","Ronald","Andres","Cristian","Manuel","Hector","Emil","Didier"]
 data2 = [1,2,3,4,5,6,7]
 
 def menu():
@@ -9,7 +9,7 @@ def menu():
     print("3. Metodo Count")
     print("4. Metodo Clear")
     print("5. Metodo Extend") #✓
-    print("6. Metodo Remove")
+    print("6. Metodo Remove") #✓
     print("7. Metodo Len")
     print("8. Metodo Pop") #✓
     print("9. Metodo Sort") #✓
@@ -28,7 +28,7 @@ def menu():
     elif (opcion == 5): 
         motodo_extend(data,data2)
     elif (opcion == 6): 
-        pass
+        cel(data)
     elif (opcion == 7): 
         pass
     elif (opcion == 8): 
@@ -38,7 +38,6 @@ def menu():
     elif (opcion == 10): 
         print(""); insertar=insert(data); print(insertar)
     elif (opcion == 11): 
-        print("la funcion del metodo reverse es mostrar a lista en orden contrario")
         datos=reversa(data); print(datos)
 
 #Funciones
@@ -74,8 +73,19 @@ def motodo_extend(data,data2): #Función Extend de Manuel Montes Barrios
     elif dato=="no":
         data.extend(data2)
         print(data)
+def cel(data): # Funcion Remove de Emil Sanchez
+    print("")
+    for i in data:
+        print(i)
+    print("")
+    dato=(input("Ingrese el nombre que desea eliminar !!(Escribe el nombre tal cual como se ve en la lista)!! : "))
+    system ("cls")
+    print("Eliminando nombre de la lista...")
+    data.remove(dato)
+    print("")
+    for i in data:
+        print(i)       
 
-#Funcion Remove no disponible
 #Funcion Len no disponible
 
 def fun_pop(data): #Función Pop de Cristian Barrera
@@ -105,6 +115,7 @@ def insert(data): #Función Insert de Jaider
     data.insert(posicion,datos)
     return data
 def reversa(a): #Función Reverse de Ronald
+    print("la funcion del metodo reverse es mostrar a lista en orden contrario")
     l = list(a)
     l.reverse()
     return l
