@@ -1,12 +1,12 @@
 from os import system; system("cls")
-data = ["Jaider","Ronald","Andres","Cristian","Manuel","Hector","Emil","Didier"]
+data = ["Jaider","Ronald","Andres","Cristian","Manuel","Hector","Emil","Didier",1,1,1,1]
 data2 = [1,2,3,4,5,6,7]
 
 def menu():
     print("APRENDIENDO LOS METODOS DE LISTAS")
     print("1. Metodo Append") #✓
     print("2. Metodo Index")
-    print("3. Metodo Count")
+    print("3. Metodo Count") #✓
     print("4. Metodo Clear")
     print("5. Metodo Extend") #✓
     print("6. Metodo Remove") #✓
@@ -22,7 +22,9 @@ def menu():
     elif (opcion == 2):
         pass
     elif (opcion == 3):
-        pass
+        print(data)
+        x=Fcount(data)
+        print(x)
     elif (opcion == 4): 
         pass
     elif (opcion == 5): 
@@ -60,7 +62,14 @@ def Metodo_Append(data,data2): #Función Append de Hector Garcia
         print("Entendido, tenga un buen dia")            
 
 #Funcion Index no disponible
-#Funcion Count no disponible
+
+def Fcount(lista):
+    dato1=int(input("ingrese el dato numerico que desea conocer su repeticion: "))
+    dato2=input("Ingrese el valor textual que desea conocer la repeticion: ")
+    final=lista.count(dato1)
+    final1=lista.count(dato2)
+    return final1,final
+
 #Funcion Clear no disponible
 
 def motodo_extend(data,data2): #Función Extend de Manuel Montes Barrios
