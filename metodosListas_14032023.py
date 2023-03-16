@@ -1,5 +1,5 @@
 from os import system; system("cls")
-data = ["Jaider","Ronald","Andres","Cristian","Manuel","Hector","Emil","Didier",1,1,1,1]
+data = ["Jaider","Ronald","Andres","Cristian","Manuel","Hector","Emil","Didier"]
 data2 = [1,2,3,4,5,6,7]
 
 def menu():
