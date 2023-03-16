@@ -1,5 +1,5 @@
 from os import system; system("cls")
-data = ["Jaider","Ronald","Andres","Cristian","Manuel","Hector","Emil","Didier"]
+data = ["Jaider","Ronald","Andres","Cristian","Manuel","Hector","Emil","Didier", "Didier"]
 data2 = [1,2,3,4,5,6,7]
 
 def menu():
@@ -24,17 +24,19 @@ def menu():
     elif (opcion == 3):
         print(data)
         x=Fcount(data)
-        print(x)
+        print(f"El elemento se repite {x} cantidad de veces")
     elif (opcion == 4): 
         pass
     elif (opcion == 5): 
-        motodo_extend(data,data2)
+        x = motodo_extend(data,data2)
+        print(f"La nueva lista extendida es {x}")
     elif (opcion == 6): 
         cel(data)
     elif (opcion == 7): 
-        pass
+        len_data(data)
     elif (opcion == 8): 
-        fun_pop(data)
+        x = fun_pop(data)
+        print(f"El dato eliminado fue {x}")
     elif (opcion == 9): 
         compu()
     elif (opcion == 10): 
@@ -59,29 +61,23 @@ def Metodo_Append(data,data2): #Función Append de Hector Garcia
             data2.append(DataCodi)
             print(data2)
     elif Pregunta=="No":
-        print("Entendido, tenga un buen dia")            
+        print("Entendido, tenga un buen dia")     
+
+    #Retornar las listas...       
 
 #Funcion Index no disponible
 
-def Fcount(lista):
-    dato1=int(input("ingrese el dato numerico que desea conocer su repeticion: "))
+def Fcount(lista): #Funcion creada por Jhorman
     dato2=input("Ingrese el valor textual que desea conocer la repeticion: ")
-    final=lista.count(dato1)
     final1=lista.count(dato2)
-    return final1,final
+    return final1
 
 #Funcion Clear no disponible
 
 def motodo_extend(data,data2): #Función Extend de Manuel Montes Barrios
-    dato=input("Quiere agregar un dato a la lista? si/no: ")
-    if dato == "si":
-        x=input("ingrese un dato: ")
-        data2.append(x)
         data.extend(data2)
-        print(data)
-    elif dato=="no":
-        data.extend(data2)
-        print(data)
+        return data
+
 def cel(data): # Funcion Remove de Emil Sanchez
     print("")
     for i in data:
@@ -97,11 +93,22 @@ def cel(data): # Funcion Remove de Emil Sanchez
 
 #Funcion Len no disponible
 
+def len_data (data):
+    print (f"La lista tiene {len(data)} cantidad de elementos")
+    print("Hasta luego....")
+
 def fun_pop(data): #Función Pop de Cristian Barrera
-    print(data)
-    x=(int(input("ingrese el elemento que desea el dato a borrar: ")))
+    contador = 0
+    print("Los datos de la listqa son:")
+    for i in data:
+        print(f"{contador}: {i}")
+        contador = contador + 1
+
+    x=(int(input("ingrese la posición del dato a borrar: ")))
     v=data.pop(x)
     print("nueva lista", data)
+    return v
+
 def compu(): #Función Sort de Andres Barragán
     data.sort()
     print("La lista se organizará automaticamente")
@@ -110,6 +117,7 @@ def compu(): #Función Sort de Andres Barragán
     print("-----------------------")
     print("listo")
     print("you did it")
+
 def insert(data): #Función Insert de Jaider
     print("Bienvenido a la inserción de datos, primero se te pedirá un dato para añadir a la lista (data)")
     print("Luego se te pedirá la posición (indexación) en donde se ubicará el dato a la lista, por ejemplo: 0"); print("")
@@ -123,6 +131,7 @@ def insert(data): #Función Insert de Jaider
         posicion=int(input("Escriba la posición del nuevo dato: "))
     data.insert(posicion,datos)
     return data
+
 def reversa(a): #Función Reverse de Ronald
     print("la funcion del metodo reverse es mostrar a lista en orden contrario")
     l = list(a)
