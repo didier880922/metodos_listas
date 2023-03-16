@@ -131,4 +131,5 @@ def reversa(a): #Función Reverse de Ronald
 
 #Codigo principal
 if __name__ == "__main__":
-    menu()
+
+    print("Cambios en el archivo....")
