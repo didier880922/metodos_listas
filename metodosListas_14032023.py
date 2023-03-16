@@ -1,10 +1,10 @@
 from os import system; system("cls")
-data = ["Jaider","Ronald","Andres","Cristian","Didier"]
-data2 = [1,2,3,4,5]
+data = ["Jaider","Ronald","Andres","Cristian","Manuel","Hector","Didier"]
+data2 = [1,2,3,4,5,6,7]
 
 def menu():
     print("APRENDIENDO LOS METODOS DE LISTAS")
-    print("1. Metodo Append")
+    print("1. Metodo Append") #✓
     print("2. Metodo Index")
     print("3. Metodo Count")
     print("4. Metodo Clear")
@@ -18,7 +18,7 @@ def menu():
     opcion = int(input("Digita una opción: "))
 
     if (opcion == 1):
-        pass
+        Metodo_Append(data,data2)
     elif (opcion == 2):
         pass
     elif (opcion == 3):
@@ -43,6 +43,27 @@ def menu():
 
 #Funciones
 
+def Metodo_Append(data,data2): #Función Append de Hector Garcia
+    Pregunta=input("¿Desear agregar un elemento a la lista? Si/No: ") #La primera letra es Mayuscula
+    if Pregunta=="Si":
+        print("1.Nombres")
+        print("2.Codigos")
+        Opcion=input("¿Bienvenido que desea agregar?: ")
+        if Opcion=="1":
+            DataNom=(input("Ingrese los nombres que desea agregar a la lista: "))
+            data.append(DataNom)
+            print(data)
+        elif Opcion=="2":
+            DataCodi=int(input("Ingrese el codigo que desea agregar a la lista: "))
+            data2.append(DataCodi)
+            print(data2)
+    elif Pregunta=="No":
+        print("Entendido, tenga un buen dia")            
+
+#Funcion Index no disponible
+#Funcion Count no disponible
+#Funcion Clear no disponible
+
 def motodo_extend(data,data2): #Función Extend de Manuel Montes Barrios
     dato=input("Quiere agregar un dato a la lista? si/no: ")
     if dato == "si":
@@ -53,6 +74,9 @@ def motodo_extend(data,data2): #Función Extend de Manuel Montes Barrios
     elif dato=="no":
         data.extend(data2)
         print(data)
+
+#Funcion Remove no disponible
+#Funcion Len no disponible
 
 def fun_pop(data): #Función Pop de Cristian Barrera
     print(data)
